@@ -1,12 +1,15 @@
 #!/bin/bash
-for inputFile in test
+for filename in $(basename "./imgIn"/*.jpg .jpg)
 do
-    for gausLevel in 0.2 0.4 0.6
+    echo "Processing: $filename" 
+    for level in 0.2 0.4 0.6
     do
-        gegl ${inputFile}.jpg -o ${inputFile}_guas_${gausLevel}.jpg -- noise-rgb gaussian=true red=${gausLevel} green=${gausLevel} blue=${gausLevel}
+        echo "Adding $level noise-rgb to $filename"
+        gegl ./imgIn/${filename}.jpg -o ./imgOut/${filename}_guas_${level}.jpg -- noise-rgb gaussian=true red=${level} green=${level} blue=${level}
     done
-    for spreadLevel in 5 10 20
+    for level in 5 10 20
     do
-        gegl ${inputFile}.jpg -o ${inputFile}_spread_${spreadLevel}.jpg -- noise-spread amount-x=${spreadLevel} amount-y=${spreadLevel}
+        echo "Adding $level spread to $filename"
+        gegl ./imgIn/${filename}.jpg -o ./imgOut/${filename}_spread_${level}.jpg -- noise-spread amount-x=${level} amount-y=${level}
     done
 done
