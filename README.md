@@ -54,6 +54,8 @@ Create username/password
 
 Proceed with Ubuntu steps above
 
+#### Find your Ubuntu files in Windows
+
 To find your Ubuntu directories in Windows paste this into your explorer navigation bar:
 
     \\wsl$\Ubuntu\
