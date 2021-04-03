@@ -35,7 +35,7 @@ Run script
 ./geglScript.sh 
 ```
 
-Files in imgIn folder will be processed and output images will be placed in imgOut.
+Files in **imgIn** folder will be processed and output images will be placed in **imgOut** folder.
 
 
 ### WINDOWS
@@ -62,13 +62,13 @@ If you cloned the repo to your home folder, you can find it at:
 
     \\wsl$\Ubuntu\home\yourUserNameHere\geglScripting\
 
-#### VS Code (optional)
+#### VS Code connected to WSL (optional)
 
-To launch VS Code using WSL, add this extention to VS Code
+To launch VS Code using WSL, search for and install this extention to VS Code via the extentions panel:
 
     ms-vscode-remote.remote-wsl
 
-Then return to Ubuntu Shell and type
+Then return to Ubuntu Shell and run
 
 ```bash
 code
