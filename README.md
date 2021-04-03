@@ -14,9 +14,9 @@ Others available at
 
 https://gegl.org/operations/
 
-Install/Usage:
+## Installation/Usage
 
-UBUNTU
+### UBUNTU
 
 Install gegl
 ```bash
@@ -35,10 +35,10 @@ Run script
 ./geglScript.sh 
 ```
 
-Files in imgIn folder will be processed and output images will be placed in imgOut.
+Files in **imgIn** folder will be processed and output images will be placed in **imgOut** folder.
 
 
-WINDOWS
+### WINDOWS
 
 Install Windows Subsystem for Linux (WSL)
 
@@ -46,20 +46,32 @@ https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
 Install Ubuntu from Microsoft Store
 
+https://www.microsoft.com/store/productId/9NBLGGH4MSV6
+
 Launch Ubuntu
 
 Create username/password
 
-Proceed with Ubuntu steps
+Proceed with Ubuntu steps above
 
-To launch VS Code using WSL run:
-
-```bash
-code
-```
+#### Find your Ubuntu files in Windows
 
 To find your Ubuntu directories in Windows paste this into your explorer navigation bar:
 
     \\wsl$\Ubuntu\
-    
+ 
+If you cloned the repo to your home folder, you can find it at:
 
+    \\wsl$\Ubuntu\home\yourUserNameHere\geglScripting\
+
+#### VS Code connected to WSL (optional)
+
+To launch VS Code using WSL, search for and install this extention to VS Code via the extentions panel:
+
+    ms-vscode-remote.remote-wsl
+
+Then return to Ubuntu Shell and run
+
+```bash
+code
+```
